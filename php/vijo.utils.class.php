@@ -11,4 +11,8 @@ class Utils {
 		drupal_add_js(drupal_get_path('module', 'vijo') .'/javascript/vijo.main.js');
 		drupal_add_js(drupal_get_path('module', 'vijo') .'/javascript/vijo.api.js');
 	}
+
+	public function includeTestData() {
+		drupal_add_js(drupal_get_path('module', 'vijo') .'/javascript/vijo.data.js');
+	}
 }

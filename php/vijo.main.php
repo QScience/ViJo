@@ -1,2 +1,7 @@
 <?php
-$main_page = '<div id="vijo-main"></div>';
+
+class MainPage {
+	public function getMainPageHTML() {
+		return '<div id="vijo-main"></div>';
+	}
+}

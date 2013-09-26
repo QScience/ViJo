@@ -1,0 +1,3 @@
+vijoData = [
+	{authors: [''], title: '', abstract: ''},
+];

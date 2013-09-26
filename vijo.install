@@ -2,10 +2,10 @@
 
 /*
  * @file
- * The install file for the VisualScience module. 
+ * The install file for the vijo module. 
  * It includes:
  * - Definition of the DB tables
- * - Definition of the basic configuration for VisualScience
+ * - Definition of the basic configuration for vijo
  */
 
 /**
@@ -13,18 +13,18 @@
 * Implementation of hook_schema().
 * @return array  the created schema
 */
-function visualscience_schema() {
+function vijo_schema() {
 }
 
 /**
  * Implementation of hook_uninstall().
  */
-function visualscience_uninstall() {
+function vijo_uninstall() {
 }
 
 /**
  * Implementation of hook_install().
  */
-function visualscience_install() {
+function vijo_install() {
   
 }
