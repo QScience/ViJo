@@ -1,0 +1,7 @@
+var vijo = (function() {
+
+	return {
+
+	};
+}
+)();

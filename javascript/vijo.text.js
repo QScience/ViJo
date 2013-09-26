@@ -1,0 +1,3 @@
+vijoText = {
+	hello = 'Hello World',
+};

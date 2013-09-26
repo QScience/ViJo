@@ -7,7 +7,8 @@
 * It allows you to post publications and create new journals based on the ones uploaded to your website..
 */
 
-require_once 'php/'
+require_once 'php/vijo.utils.class.php'
+require_once 'php/vijo.main.php';
 
 /**
  * Implementation of hook_menu().
@@ -30,6 +31,7 @@ function vijo_menu() {
  * Creates the vijo page
  */
 function vijo_page($clear = TRUE) {
-  
-  return $output;
+  $page = new Utils;
+  $page->includeMainPageJS();
+  return $main_page;
 }
