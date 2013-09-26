@@ -1,4 +1,4 @@
-ViJo_Drupal
+ViJo
 ===========
 
 The Drupal Module for Virtual Journals
