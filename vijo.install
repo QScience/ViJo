@@ -1,0 +1,30 @@
+<?php
+
+/*
+ * @file
+ * The install file for the VisualScience module. 
+ * It includes:
+ * - Definition of the DB tables
+ * - Definition of the basic configuration for VisualScience
+ */
+
+/**
+* 
+* Implementation of hook_schema().
+* @return array  the created schema
+*/
+function visualscience_schema() {
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function visualscience_uninstall() {
+}
+
+/**
+ * Implementation of hook_install().
+ */
+function visualscience_install() {
+  
+}

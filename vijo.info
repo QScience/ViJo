@@ -1,0 +1,8 @@
+name = ViJo
+description = Interface to interact with vijo.inn.ac.
+package = ViJo
+core = 7.x
+configure = admin/config/media/vijo
+
+version = "7.x-1.x-dev"
+project = "vijo"
