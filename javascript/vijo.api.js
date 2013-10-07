@@ -76,14 +76,12 @@ var vijoAPI = (function() {
 		 * .authors: an array of authors
 		 */
 		 createViJo: function createViJo(publication) {
+		 	if (!isNan(publication)) {
+		 		publication = vijoData[publication];
+		 	}
 
-
-
-		 	publication = vijoData[publication]
-
-
-
-		 	var date, keywords;
+		 	var date, keywords, username;
+		 	username = 'seba-1511';
 		 	date = publication.date || new Date();
 		 	date = new Date(date).toISOString();
 		 	keywords = extractKeywords(publication.abstract);
@@ -101,14 +99,14 @@ var vijoAPI = (function() {
 		 		type: 'POST',
 		 		data: {
 		 			'virtualjournal':{
-		 				'belongs_to_logged_in_user': 'seba-1511',
+		 				'belongs_to_logged_in_user': username,
 		 				'contains_authors_in_references': publication.authors,
 		 				'contains_authors_in_references_weight': 10,
 		 				'contains_keywords_important': publication.hotKeywords,
 		 				'contains_keywords_normal': publication.keywords,
 		 				'contains_keywords_supplementary': publication.allKeywords,
 		 				'created': date,
-		 				'created_by': 'seba-1511',
+		 				'created_by': username,
 		 				'created_by_url': window.location.hostname + Drupal.settings.basePath,
 		 				'description': publication.title,
 		 				'modified': date,
