@@ -75,7 +75,7 @@ var vijoAPI = (function() {
 	 		var username, html;
 	 		html = document.createElement('div');
 	 		html.innerHTML = data.html;
-	 		username = html.getElementsByClassName('uname')[0].innerText.trim();
+	 		username = document.all ? html.getElementsByClassName('uname')[0].innerText.trim() : html.getElementsByClassName('uname')[0].textContent.trim();
 	 		callback(username);
 	 	});
 	 };
