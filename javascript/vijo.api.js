@@ -74,8 +74,11 @@ var vijoAPI = (function() {
 	 	jQuery.getJSON(innAcWidgetUrl, function(data) {
 	 		var username, html;
 	 		html = document.createElement('div');
+	 		html.id = 'vijoToDelete';
 	 		html.innerHTML = data.html;
-	 		username = document.all ? html.getElementsByClassName('uname')[0].innerText.trim() : html.getElementsByClassName('uname')[0].textContent.trim();
+	 		document.getElementsByTagName('body')[0].insertBefore(html);
+	 		username = document.all ? document.getElementById('innacWidgetUsername').innerText.trim() : document.getElementById('innacWidgetUsername').textContent.trim();
+	 		document.getElementById('vijoToDelete').innerHTML = '';
 	 		callback(username);
 	 	});
 	 };
