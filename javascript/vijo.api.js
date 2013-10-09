@@ -90,13 +90,16 @@ var vijoAPI = (function() {
 		 * .abstract: its abstract (string)
 		 * .authors: an array of authors
 		 */
-		 createViJo: function createViJo(publication) {
+		 createViJo: function createViJo(publication, givenUsername) {
 		 	if (!isNaN(publication)) {
 		 		publication = vijoData[publication];
 		 	}
 
 		 	getInnAcUsername( function (username) {
 		 		var date, keywords;
+		 		if (!username || username === '') {
+		 			username = givenUsername || '';
+		 		}
 		 		date = publication.date || new Date();
 		 		date = new Date(date).toISOString();
 		 		keywords = extractKeywords(publication.abstract);
@@ -140,6 +143,7 @@ sendViJoPaper: function sendViJoPaper(publication) {
 	var date;
 	date = publication.date || new Date();
 	date = new Date(date).toISOString();
+	publication.authors = publication.authors.join('\n');
 	jQuery.ajax({
 		url: 'http://vijo.inn.ac/api/publications.json',
 		type: 'POST',
