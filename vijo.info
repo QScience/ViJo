@@ -1,6 +1,6 @@
-name = ViJo
+name = vijo
 description = Interface to interact with vijo.inn.ac.
-package = ViJo
+package = QScience
 core = 7.x
 configure = admin/config/media/vijo
 
