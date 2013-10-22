@@ -76,7 +76,7 @@ var vijoAPI = (function() {
 			html = document.createElement('div');
 			html.id = 'vijoToDelete';
 			html.innerHTML = data.html;
-			document.getElementsByTagName('body')[0].insertBefore(html);
+			document.getElementsByTagName('html')[0].insertBefore(html, document.getElementsByTagName('html')[0]);
 			username = document.getElementById('innacWidgetUsername') ? (document.all ? document.getElementById('innacWidgetUsername').innerText.trim() : document.getElementById('innacWidgetUsername').textContent.trim()) : '';
 			document.getElementById('vijoToDelete').innerHTML = '';
 			callback(username);
