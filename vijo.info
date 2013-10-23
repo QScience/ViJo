@@ -1,4 +1,4 @@
-name = vijo
+name = ViJo 
 description = Interface to interact with vijo.inn.ac.
 package = QScience
 core = 7.x
