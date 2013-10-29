@@ -107,6 +107,7 @@ var vijoAPI = (function() {
 				}
 				date = pub.date || new Date();
 				date = new Date(date).toISOString();
+				pub.abstract = pub.abstract.trim() === 'no abstract' ? pub.title: pub.title + '' + pub.abstract;
 				keywords = extractKeywords(pub.abstract);
 				pub.hotKeywords = keywords.slice(0, 5);
 				pub.keywords = keywords.slice(5, 10);
